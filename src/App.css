@@ -1,5 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #282c34;
+}
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -15,13 +24,14 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 14vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  border-bottom: solid 1px #db8312;
 }
 
 .App-link {
@@ -35,4 +45,244 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header-area {
+  background-color: #282c34;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.movie-block {
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 71%;
+  margin: 0% auto 2% auto;
+  border: #d59d1a solid 1px;
+  padding: 3%;
+}
+.list-area {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 2%;
+}
+.list-area-director {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.donation-form {
+  width: 69%;
+  height: 39rem;
+  opacity: 100%;
+}
+.form-title {
+  text-align: left;
+  font: Bold 25px/39px Helvetica;
+  color: #ffffff;
+  width: 68%;
+  height: 44%;
+  top: 54%;
+  position: relative;
+  left: 8%;
+}
+.main {
+  display: grid;
+  width: 100%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "pesonal-info-area";
+  height: 31.35rem;
+}
+.personal-info-area {
+  display: grid;
+  grid-template-rows: repeat(6, 20%) 10%;
+  grid-template-areas: "info-title" "name" "address1" "address2" "address3" "email" "submit";
+}
+.info-title {
+  grid-area: info-title;
+}
+.input-long {
+  left: 8%;
+  width: 83%;
+}
+.input-medium {
+  width: 65%;
+  left: 17%;
+}
+.input-small {
+  width: 60%;
+  left: 17%;
+}
+.name {
+  grid-area: name;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "movie actor director";
+}
+.input-movie-name {
+  grid-area: movie;
+  left: 17%;
+}
+.input-actor-name {
+  grid-area: actor;
+  left: 17%;
+}
+.input-director-name {
+  grid-area: director;
+  left: 17%;
+}
+.address1 {
+  grid-area: address1;
+  left: 6%;
+}
+.address2 {
+  grid-area: address2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "rating genre runtime";
+}
+.rating {
+  grid-area: rating;
+  left: 17%;
+}
+.genre {
+  grid-area: genre;
+  left: 17%;
+  top: 1%;
+}
+.runtime {
+  grid-area: runtime;
+  left: 17%;
+}
+.email {
+  grid-area: email;
+  left: 6%;
+}
+.address3 {
+  grid-area: address3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "metascore votes year";
+}
+.metascore {
+  grid-area: metascore;
+  left: 17%;
+}
+.votes {
+  grid-area: votes;
+  left: 17%;
+}
+.year {
+  grid-area: year;
+  left: 17%;
+}
+.form-submit {
+  grid-area: submit;
+  margin-left: auto;
+  width: 15%;
+  margin-right: auto;
+}
+.go-back {
+  grid-area: go-back;
+  color: #c1f7d5;
+  position: relative;
+  top: 35%;
+  left: 16%;
+  text-decoration: underline;
+  width: 23%;
+  height: 23%;
+}
+
+.input-area {
+  background: transparent;
+  color: #ffffff;
+  height: 42%;
+  position: relative;
+  top: 27%;
+  border: none;
+  border-bottom: 0px solid #c1f7d5;
+  border-bottom-width: 0px;
+  border-bottom-width: 0px;
+  border-width: 2px;
+}
+
+.label-text {
+  color: white;
+  text-align: left;
+  font: lighter 13px/13px Helvetica;
+  letter-spacing: 0.56px;
+  position: relative;
+  height: 2rem;
+  top: 1rem;
+  width: 48%;
+}
+
+.home-page-body {
+  background-color: #282c34;
+}
+
+.movie-link {
+  display: flex;
+  height: 30rem;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+.movies-button {
+  background: #86827c;
+  height: 8rem;
+  width: 19rem;
+  font-size: xxx-large;
+}
+.movie-info {
+  background: black;
+  display: flex;
+}
+.movie-info-button-area {
+  display: flex;
+  flex-direction: column;
+  height: 11rem;
+  justify-content: space-evenly;
+}
+.movie-info-buttons {
+  background: #86827c;
+  height: 4rem;
+  width: 13rem;
+  font-size: 117%;
+  box-shadow: inset 4px -4px 9px rgba(13, 12, 12, 0.5);
+}
+.director-block {
+  color: white;
+  height: 7rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+  margin: 0% auto 2% auto;
+  border: #d59d1a solid 1px;
+}
+.director-area {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-director-title {
+  text-align: left;
+  font: Bold 25px/39px Helvetica;
+  color: #ffffff;
+  width: 68%;
+  margin-left: 8%;
+}
+.dir-form-text {
+  height: 5rem;
+  margin-left: 8%;
+}
+.link-css {
+  text-decoration: none;
+  color: white;
 }

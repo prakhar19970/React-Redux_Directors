@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Homepage from './components/main/homepage'
+import { Route, BrowserRouter, Switch } from "react-router-dom";
 
+import Directors from './components/Directors';
+
+import EditDirector from './components/EditDirector';
+import AddDirectors from './components/AddDirectors';
+import SingleDirector from './components/SingleDirector';
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <BrowserRouter>
+      <div className="App">
+        <header className="App-header" >
+          <h1>FlixInfo</h1>
+        </header>
+        <Switch>
+          <Route path='/home' component={Homepage} exact />
+          <Route path='/directors/' component={Directors} exact />
+          <Route path='/directors/add' component={AddDirectors} exact />
+          <Route path="/directors/:id/update" component={EditDirector} exact />
+          <Route path="/directors/:id" component={SingleDirector} exact />
+        </Switch>
+      </div>
+    </BrowserRouter >
   );
 }
 
